@@ -1,0 +1,83 @@
+export const demoData = {
+  shg: {
+    name: 'Sakhi Mahila Bachat Gat',
+    shgId: 'SHG-MH-2026-001',
+    formationDate: '15 Jun 2021',
+    village: 'Nandgaon',
+    taluka: 'Shrigonda',
+    district: 'Ahmednagar',
+    state: 'Maharashtra',
+    president: 'Sunita Patil',
+    contact: '9876543210',
+    monthlySavings: '₹500',
+    interestRate: '2% monthly',
+    penalty: '₹50 late fee',
+    bank: 'Maharashtra Gramin Bank',
+  },
+  summary: {
+    totalMembers: 15,
+    totalSavings: 300000,
+    activeLoans: 8,
+    outstandingLoans: 24000,
+    groupBalance: 273450,
+    financialHealth: 82,
+  },
+  members: [
+    { id: '1', memberId: 'MBR001', name: 'Asha Jadhav', phone: '9870000001', savings: 20000, loanOutstanding: 0, status: 'Active' },
+    { id: '2', memberId: 'MBR002', name: 'Meena Shinde', phone: '9870000002', savings: 20500, loanOutstanding: 12000, status: 'Active' },
+    { id: '3', memberId: 'MBR003', name: 'Lata Pawar', phone: '9870000003', savings: 19500, loanOutstanding: 0, status: 'Active' },
+    { id: '4', memberId: 'MBR004', name: 'Kavita More', phone: '9870000004', savings: 21000, loanOutstanding: 0, status: 'Active' },
+    { id: '5', memberId: 'MBR005', name: 'Rani Deshmukh', phone: '9870000005', savings: 18000, loanOutstanding: 0, status: 'Active' },
+    { id: '6', memberId: 'MBR006', name: 'Pooja Kale', phone: '9870000006', savings: 17000, loanOutstanding: 12000, status: 'Active' },
+  ],
+  savings: [
+    { id: 's1', date: '05 Aug 2026', member: 'Asha Jadhav', month: 'Aug 2026', amount: 500, receipt: 'SAV001' },
+    { id: 's2', date: '05 Aug 2026', member: 'Meena Shinde', month: 'Aug 2026', amount: 500, receipt: 'SAV002' },
+    { id: 's3', date: '05 Aug 2026', member: 'Lata Pawar', month: 'Aug 2026', amount: 500, receipt: 'SAV003' },
+  ],
+  loans: [
+    { id: 'l1', loanId: 'LOAN001', member: 'Meena Shinde', purpose: 'Tailoring machine', amount: 20000, outstanding: 12000, status: 'Partially Paid' },
+    { id: 'l2', loanId: 'LOAN002', member: 'Pooja Kale', purpose: 'Goat rearing', amount: 15000, outstanding: 12000, status: 'Overdue' },
+    { id: 'l3', loanId: 'LOAN003', member: 'Nirmala Kadam', purpose: 'Education fees', amount: 10000, outstanding: 0, status: 'Completed' },
+  ],
+  transactions: [
+    { id: 't1', transactionId: 'TXN000245', date: '22 Aug 2026', type: 'Savings', member: 'Asha Jadhav', amount: 500, balance: 273450 },
+    { id: 't2', transactionId: 'TXN000244', date: '21 Aug 2026', type: 'Repayment', member: 'Meena Shinde', amount: 2200, balance: 272950 },
+    { id: 't3', transactionId: 'TXN000243', date: '20 Aug 2026', type: 'Expense', member: '-', amount: 1200, balance: 270750 },
+  ],
+  meetings: [
+    { id: 'm1', title: 'Monthly savings and loan review', date: '02 Sep 2026', time: '10:30 AM', location: 'Gram Panchayat Hall', status: 'Scheduled' },
+    { id: 'm2', title: 'Government scheme awareness', date: '18 Aug 2026', time: '11:00 AM', location: 'Anganwadi Center', status: 'Completed' },
+  ],
+  notifications: [
+    { id: 'n1', title: 'Savings reminder', message: 'Monthly savings collection is scheduled for 5 September.', type: 'Savings' },
+    { id: 'n2', title: 'Overdue installment', message: 'Pooja Kale has one overdue installment. Review before sharing a reminder.', type: 'Loan' },
+    { id: 'n3', title: 'Meeting reminder', message: 'Next meeting is scheduled at Gram Panchayat Hall.', type: 'Meeting' },
+  ],
+  schemes: [
+    { name: 'DAY-NRLM', description: 'Official rural livelihood mission information for SHG support.', eligibility: 'As per official scheme rules.', source: 'https://www.myscheme.gov.in/schemes/day-nrlm' },
+    { name: 'myScheme SHG discovery', description: 'Use official scheme search to verify current SHG-related benefits.', eligibility: 'Depends on scheme and location.', source: 'https://www.myscheme.gov.in/' },
+  ],
+  insights: [
+    'Savings increased by 12% compared with last month.',
+    '3 installments are pending this week.',
+    'Group balance increased this month after repayment collection.',
+    'Loan repayment rate improved compared with last month.',
+  ],
+  savingsTrend: [
+    { label: 'Apr', value: 60000 },
+    { label: 'May', value: 67500 },
+    { label: 'Jun', value: 72000 },
+    { label: 'Jul', value: 76000 },
+    { label: 'Aug', value: 84500 },
+  ],
+  loanOverview: [
+    { label: 'Given', value: 45000 },
+    { label: 'Repaid', value: 21000 },
+    { label: 'Due', value: 24000 },
+  ],
+  incomeExpense: [
+    { label: 'Income', value: 52000 },
+    { label: 'Expense', value: 17300 },
+  ],
+}

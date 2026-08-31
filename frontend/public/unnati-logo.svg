@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Unnati Swayam Sahyta Gat</title>
+  <desc id="desc">People, growth arrow, and supporting hand logo mark.</desc>
+  <defs>
+    <linearGradient id="brandGradient" x1="36" y1="211" x2="214" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#052a57"/>
+      <stop offset="0.48" stop-color="#078f91"/>
+      <stop offset="1" stop-color="#42bf82"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="42" fill="#fffdfa"/>
+  <path d="M55 121c4-56 49-96 102-91 42 4 76 34 88 75" fill="none" stroke="url(#brandGradient)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M44 166c54 17 123 9 177-28" fill="none" stroke="url(#brandGradient)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M204 121l38-15-13 39-8-17-17-7Z" fill="#25b87a"/>
+  <circle cx="128" cy="78" r="14" fill="url(#brandGradient)"/>
+  <circle cx="92" cy="91" r="11" fill="#075071"/>
+  <circle cx="164" cy="91" r="11" fill="#087e8e"/>
+  <circle cx="62" cy="104" r="9" fill="#052a57"/>
+  <circle cx="194" cy="104" r="9" fill="#052a57"/>
+  <path d="M112 109c0-12 8-21 16-21s16 9 16 21v50h-32v-50Z" fill="url(#brandGradient)"/>
+  <path d="M77 119c0-10 7-18 15-18s15 8 15 18v43H77v-43Z" fill="#075071"/>
+  <path d="M149 119c0-10 7-18 15-18s15 8 15 18v43h-30v-43Z" fill="#087e8e"/>
+  <path d="M48 128c0-8 6-14 14-14s14 6 14 14v32H48v-32Z" fill="#052a57"/>
+  <path d="M180 128c0-8 6-14 14-14s14 6 14 14v32h-28v-32Z" fill="#052a57"/>
+  <path d="M48 170c33 11 73 13 110 5 28-6 53-17 75-33-16 25-47 49-87 56-38 7-75-3-98-28Z" fill="#052a57"/>
+  <path d="M98 199c22 9 51 13 80 3 5-2 9 1 10 5 1 5-1 9-6 11-33 13-69 6-95-7l11-12Z" fill="#052a57"/>
+</svg>
