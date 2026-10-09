@@ -13,6 +13,7 @@ const shgSchema = new mongoose.Schema(
     contactPhone: String,
     contactEmail: String,
     monthlySavingsAmount: { type: Number, default: 0, min: 0 },
+    monthlySavingsDueDay: { type: Number, min: 1, max: 28, default: 1 },
     loanInterestRate: { type: Number, default: 2, min: 0 },
     savingsInterestRate: { type: Number, default: 0, min: 0 },
     latePenaltyAmount: { type: Number, default: 50, min: 0 },

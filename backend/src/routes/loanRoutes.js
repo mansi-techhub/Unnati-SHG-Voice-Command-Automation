@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.use(protect);
 router.get('/', controller.list);
-router.post('/', requireFields(['shg', 'member', 'amount', 'purpose', 'interestRate', 'durationMonths']), controller.apply);
+router.post('/', authorize('admin'), requireFields(['shg', 'member', 'amount', 'purpose', 'interestRate', 'durationMonths']), controller.apply);
 router.post('/:id/approve', authorize('admin'), controller.approve);
 router.post('/:id/reject', authorize('admin'), controller.reject);
 router.post('/:id/disburse', authorize('admin'), controller.disburse);

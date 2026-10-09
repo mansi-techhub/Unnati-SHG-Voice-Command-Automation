@@ -19,6 +19,7 @@ exports.summary = asyncHandler(async (req, res) => {
   const income = transactions.filter((t) => t.direction === 'credit').reduce((sum, t) => sum + t.amount, 0);
   const expense = transactions.filter((t) => t.direction === 'debit').reduce((sum, t) => sum + t.amount, 0);
 
+  const hasFinancialRecords = savings.length > 0 || loans.length > 0 || transactions.length > 0;
   res.json({
     members,
     totalSavings,
@@ -26,10 +27,25 @@ exports.summary = asyncHandler(async (req, res) => {
     totalDistributed,
     outstanding,
     groupBalance: income - expense,
-    financialHealth: Math.max(35, Math.min(95, Math.round(100 - (outstanding / Math.max(totalSavings + income, 1)) * 35))),
+    financialHealth: hasFinancialRecords
+      ? Math.max(0, Math.min(95, Math.round(100 - (outstanding / Math.max(totalSavings + income, 1)) * 35)))
+      : 0,
   });
 });
 
 exports.exportInfo = asyncHandler(async (req, res) => {
-  res.json({ message: 'Export architecture ready', formats: ['pdf', 'csv', 'xlsx'] });
+  const format = String(req.query.format || 'json').toLowerCase();
+  const filter = req.query.shg ? { shg: req.query.shg } : {};
+  const transactions = await Transaction.find(filter).populate('member', 'name memberId').sort({ date: -1 }).lean();
+  if (format === 'csv') {
+    const headers = ['transactionId', 'date', 'type', 'direction', 'amount', 'balanceAfter', 'member', 'description'];
+    const escape = (value) => `"${String(value ?? '').replace(/"/g, '""')}"`;
+    const rows = transactions.map((item) => [
+      item.transactionId, item.date?.toISOString(), item.type, item.direction, item.amount,
+      item.balanceAfter, item.member?.name || '', item.description || '',
+    ].map(escape).join(','));
+    res.type('text/csv').send([headers.join(','), ...rows].join('\n'));
+    return;
+  }
+  res.json({ format: 'json', generatedAt: new Date().toISOString(), transactions });
 });

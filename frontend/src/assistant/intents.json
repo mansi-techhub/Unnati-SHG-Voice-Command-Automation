@@ -1,0 +1,308 @@
+[
+  {
+    "intent": "OPEN_DASHBOARD",
+    "module": "dashboard",
+    "examples": {
+      "en": ["dashboard", "open dashboard", "show dashboard", "go to dashboard", "home page"],
+      "hi": ["डैशबोर्ड खोलो", "डैशबोर्ड खोलें", "मुख्य पेज दिखाओ", "होम पेज पर जाओ"],
+      "mr": ["डॅशबोर्ड उघडा", "डॅशबोर्ड दाखवा", "मुख्य पान दाखवा", "होम पेजवर जा"]
+    }
+  },
+  {
+    "intent": "OPEN_MEMBERS",
+    "module": "members",
+    "examples": {
+      "en": ["members", "open members", "show members", "member list", "member page", "member management"],
+      "hi": ["सदस्य खोलो", "सदस्य खोलें", "सदस्य प्रबंधन खोलो", "सदस्यों की सूची दिखाओ", "सदस्य पेज खोलो", "मेंबर दिखाओ"],
+      "mr": ["सदस्य उघडा", "सदस्य दाखवा", "सदस्य व्यवस्थापन उघडा", "सदस्यांची यादी दाखवा", "मेंबर दाखवा", "सदस्य पान"]
+    }
+  },
+  {
+    "intent": "OPEN_SAVINGS",
+    "module": "savings",
+    "examples": {
+      "en": ["savings", "open savings", "show savings", "savings page", "savings records", "monthly savings"],
+      "hi": ["बचत खोलो", "बचत खोलें", "बचत प्रबंधन खोलो", "बचत दिखाओ", "बचत पेज", "मासिक बचत दिखाओ", "बचत वाले पेज पर जाओ", "मुझे बचत देखनी है"],
+      "mr": ["बचत उघडा", "बचत दाखवा", "बचत व्यवस्थापन उघडा", "बचत पान", "मासिक बचत दाखवा", "मला बचत बघायची आहे"]
+    }
+  },
+  {
+    "intent": "OPEN_LOANS",
+    "module": "loans",
+    "examples": {
+      "en": ["loans", "open loans", "show loans", "loan records", "loan list"],
+      "hi": ["कर्ज खोलो", "कर्ज खोलें", "कर्ज प्रबंधन खोलो", "कर्ज दिखाओ", "लोन दिखाओ", "कर्ज की सूची"],
+      "mr": ["कर्ज उघडा", "कर्ज दाखवा", "कर्ज व्यवस्थापन उघडा", "लोन दाखवा", "कर्जाची यादी"]
+    }
+  },
+  {
+    "intent": "OPEN_TRANSACTIONS",
+    "module": "ledger",
+    "examples": {
+      "en": ["transactions", "open transactions", "show transactions", "open ledger", "show ledger", "digital ledger"],
+      "hi": ["लेन-देन दिखाओ", "डिजिटल लेजर खोलो", "लेजर खोलो", "खाता दिखाओ", "व्यवहार दिखाओ"],
+      "mr": ["डिजिटल लेजर उघडा", "व्यवहार दाखवा", "लेजर उघडा", "खाते दाखवा", "लेन-देन दाखवा"]
+    }
+  },
+  {
+    "intent": "OPEN_REPORTS",
+    "module": "reports",
+    "examples": {
+      "en": ["reports", "open reports", "show reports", "report page"],
+      "hi": ["रिपोर्ट खोलो", "रिपोर्ट खोलें", "रिपोर्ट केंद्र खोलो", "रिपोर्ट दिखाओ", "रिपोर्ट पेज"],
+      "mr": ["अहवाल उघडा", "रिपोर्ट दाखवा", "अहवाल केंद्र उघडा", "अहवाल पान"]
+    }
+  },
+  {
+    "intent": "OPEN_ANALYTICS",
+    "module": "insights",
+    "examples": {
+      "en": ["analytics", "open analytics", "show insights", "financial insights", "smart financial insights"],
+      "hi": ["विश्लेषण दिखाओ", "इनसाइट्स खोलो", "वित्तीय जानकारी दिखाओ", "स्मार्ट वित्तीय जानकारी खोलो"],
+      "mr": ["विश्लेषण दाखवा", "इनसाइट्स उघडा", "आर्थिक माहिती दाखवा", "स्मार्ट आर्थिक निरीक्षणे उघडा"]
+    }
+  },
+  {
+    "intent": "OPEN_PROFILE",
+    "module": "profile",
+    "examples": {
+      "en": ["profile", "open profile", "show group profile", "shg profile", "open shg profile"],
+      "hi": ["प्रोफाइल खोलो", "समूह प्रोफ़ाइल खोलो", "समूह की जानकारी दिखाओ", "एसएचजी प्रोफाइल"],
+      "mr": ["प्रोफाइल उघडा", "गट प्रोफाइल उघडा", "गटाची माहिती दाखवा", "एसएचजी प्रोफाइल"]
+    }
+  },
+  {
+    "intent": "OPEN_SETTINGS",
+    "module": "settings",
+    "examples": {
+      "en": ["settings", "open settings"],
+      "hi": ["सेटिंग खोलो", "सेटिंग पेज"],
+      "mr": ["सेटिंग उघडा", "सेटिंग पान"]
+    }
+  },
+  {
+    "intent": "OPEN_MEETINGS",
+    "module": "meetings",
+    "examples": {
+      "en": ["meetings", "open meetings", "show meetings", "meeting schedule"],
+      "hi": ["बैठकें दिखाओ", "बैठकें खोलो", "बैठके खोलो", "बैठक खोलो", "बैठक प्रबंधन खोलो", "मीटिंग खोलो", "बैठक की सूची"],
+      "mr": ["बैठका दाखवा", "बैठका उघडा", "बैठक उघडा", "बैठक व्यवस्थापन उघडा", "मीटिंग उघडा", "बैठकीची यादी"]
+    }
+  },
+  {
+    "intent": "OPEN_ATTENDANCE",
+    "module": "attendance",
+    "examples": {
+      "en": ["attendance", "open attendance", "show attendance"],
+      "hi": ["उपस्थिति दिखाओ", "उपस्थिति खोलो", "उपस्थिति खोलें", "हाजिरी खोलो", "उपस्थिति पेज"],
+      "mr": ["हजेरी दाखवा", "हजेरी उघडा", "उपस्थिती उघडा", "हजेरी पान"]
+    }
+  },
+  {
+    "intent": "OPEN_NOTIFICATIONS",
+    "module": "notifications",
+    "examples": {
+      "en": ["notifications", "open notifications", "show notifications"],
+      "hi": ["सूचनाएं दिखाओ", "सूचनाएं खोलो", "नोटिफिकेशन खोलो", "सूचना पेज"],
+      "mr": ["सूचना दाखवा", "सूचना उघडा", "नोटिफिकेशन उघडा", "सूचना पान"]
+    }
+  },
+  {
+    "intent": "OPEN_PASSBOOK",
+    "module": "passbook",
+    "examples": {
+      "en": ["passbook", "open passbook", "show passbook"],
+      "hi": ["पासबुक खोलो", "पासबुक खोलें", "मेरी डिजिटल पासबुक खोलो", "पासबुक दिखाओ"],
+      "mr": ["पासबुक उघडा", "माझे डिजिटल पासबुक उघडा", "पासबुक दाखवा"]
+    }
+  },
+  {
+    "intent": "OPEN_MONTHLY_ACCOUNTS",
+    "module": "monthly",
+    "examples": {
+      "en": ["monthly accounts", "open monthly accounts", "monthly statement"],
+      "hi": ["मासिक खाते दिखाओ", "मासिक खाते खोलो", "मासिक रिपोर्ट", "महीने का हिसाब"],
+      "mr": ["मासिक खाते दाखवा", "मासिक खाते उघडा", "महिन्याचा हिशोब", "मासिक अहवाल"]
+    }
+  },
+  {
+    "intent": "OPEN_BALANCE_SHEET",
+    "module": "balance",
+    "examples": {
+      "en": ["balance sheet", "open balance sheet", "open group balance sheet", "open sheet", "show sheet", "sheet kholo", "sheet khol do", "balance sheet kholo", "balance sheet khol do"],
+      "hi": ["बैलेंस शीट दिखाओ", "बैलेंस शीट खोलो", "बैलेंस शीट डाउनलोड पेज खोलो", "शीट खोलो", "शीट दिखाओ"],
+      "mr": ["ताळेबंद दाखवा", "ताळेबंद उघडा", "शीट उघडा", "शीट दाखवा"]
+    }
+  },
+  {
+    "intent": "OPEN_LOAN_DETAILS",
+    "module": "loanDetails",
+    "examples": {
+      "en": ["loan details", "open loan details", "my loan details"],
+      "hi": ["कर्ज का विवरण", "कर्ज विवरण खोलो", "लोन डिटेल्स दिखाओ"],
+      "mr": ["कर्ज तपशील", "कर्ज तपशील उघडा", "लोन डिटेल्स दाखवा"]
+    }
+  },
+  {
+    "intent": "OPEN_LOAN_DEMAND_RISK",
+    "module": "loanDemandRisk",
+    "examples": {
+      "en": ["loan demand and risk", "loan risk", "loan demand", "loan demand risk"],
+      "hi": ["कर्ज जोखिम", "कर्ज मांग और जोखिम खोलो", "लोन की मांग", "कर्ज मांग और जोखिम"],
+      "mr": ["कर्ज जोखीम", "कर्ज मागणी", "कर्ज मागणी आणि जोखीम", "कर्ज मागणी व जोखीम उघडा"]
+    }
+  },
+  {
+    "intent": "OPEN_LOAN_COLLECTION",
+    "module": "loanCollection",
+    "examples": {
+      "en": ["loan collection", "collect loan installment", "emi collection", "loan interest collection", "collect loans and interest", "collect loans interest"],
+      "hi": ["कर्ज वसूली", "कर्ज और ब्याज संग्रह", "कर्ज किस्त जमा", "लोन ईएमआई"],
+      "mr": ["कर्ज वसुली", "कर्ज व व्याज संकलन", "कर्ज हप्ता जमा", "लोन ईएमआय"]
+    }
+  },
+  {
+    "intent": "OPEN_EXPENSES",
+    "module": "otherExpense",
+    "examples": {
+      "en": ["expenses", "open expenses", "show expenses", "other expense"],
+      "hi": ["खर्च दिखाओ", "खर्च खोलो", "अन्य खर्च खोलो", "अन्य खर्च"],
+      "mr": ["खर्च दाखवा", "खर्च उघडा", "इतर खर्च उघडा", "इतर खर्च"]
+    }
+  },
+  {
+    "intent": "OPEN_INCOME",
+    "module": "otherIncome",
+    "examples": {
+      "en": ["income", "open income", "show income", "other income"],
+      "hi": ["आय दिखाओ", "आमदनी दिखाओ", "अन्य आय खोलो", "अन्य आय"],
+      "mr": ["उत्पन्न दाखवा", "इतर उत्पन्न उघडा", "इतर उत्पन्न", "आय दाखवा"]
+    }
+  },
+  {
+    "intent": "OPEN_GOALS",
+    "module": "goals",
+    "examples": {
+      "en": ["goals", "open goals", "show savings goals"],
+      "hi": ["लक्ष्य दिखाओ", "लक्ष्य आधारित बचत खोलो", "बचत लक्ष्य", "लक्ष्य खोलो"],
+      "mr": ["ध्येय दाखवा", "ध्येयाधारित बचत उघडा", "बचत ध्येय", "ध्येय उघडा"]
+    }
+  },
+  {
+    "intent": "OPEN_EMERGENCY_FUND",
+    "module": "emergency",
+    "examples": {
+      "en": ["emergency fund", "open emergency fund", "show emergency fund"],
+      "hi": ["आपातकालीन निधि खोलो", "आपातकालीन निधि", "आपात फंड दिखाओ"],
+      "mr": ["आपत्कालीन निधी उघडा", "आपत्कालीन निधी", "आपत्कालीन फंड दाखवा"]
+    }
+  },
+  {
+    "intent": "OPEN_DOCUMENTS",
+    "module": "documents",
+    "examples": {
+      "en": ["documents", "open documents", "show documents", "document vault"],
+      "hi": ["दस्तावेज़ तिजोरी खोलो", "दस्तावेज़ दिखाओ", "दस्तावेज खोलो"],
+      "mr": ["दस्तऐवज तिजोरी उघडा", "कागदपत्रे दाखवा", "दस्तऐवज उघडा"]
+    }
+  },
+  {
+    "intent": "OPEN_SCHEMES",
+    "module": "schemes",
+    "examples": {
+      "en": ["government schemes", "open schemes", "show schemes", "schemes"],
+      "hi": ["सरकारी योजनाएं दिखाओ", "सरकारी योजनाएं खोलो", "योजनाएं खोलो"],
+      "mr": ["सरकारी योजना दाखवा", "सरकारी योजना उघडा", "योजना उघडा"]
+    }
+  },
+  {
+    "intent": "OPEN_CORRECTION_REQUESTS",
+    "module": "editRequests",
+    "examples": {
+      "en": ["correction requests", "edit requests", "open correction requests"],
+      "hi": ["सुधार अनुरोध", "सुधार अनुरोध खोलो", "सुधार की विनती खोलो"],
+      "mr": ["दुरुस्ती विनंती", "दुरुस्ती विनंती उघडा", "दुरुस्ती विनंत्या उघडा"]
+    }
+  },
+  {
+    "intent": "OPEN_MEMBER_LOAN_APPLICATION",
+    "module": "loanApplication",
+    "examples": {
+      "en": ["apply for loan", "loan application", "open loan application"],
+      "hi": ["कर्ज के लिए आवेदन", "लोन आवेदन", "कर्ज आवेदन खोलो"],
+      "mr": ["कर्जासाठी अर्ज", "कर्जासाठी अर्ज उघडा", "लोन अर्ज", "कर्ज अर्ज उघडा"]
+    }
+  },
+  {
+    "intent": "OPEN_MEMBER_LOAN_REQUESTS",
+    "module": "loanApplications",
+    "examples": {
+      "en": ["member loan requests", "loan applications", "open loan applications"],
+      "hi": ["सदस्य कर्ज अनुरोध", "सदस्य कर्ज अनुरोध खोलो", "कर्ज आवेदन सूची"],
+      "mr": ["सदस्य कर्ज विनंत्या", "सदस्य कर्ज विनंत्या उघडा", "कर्ज अर्जांची यादी"]
+    }
+  },
+  {
+    "intent": "OPEN_MEMBER_BALANCE",
+    "module": "memberBalanceSheet",
+    "examples": {
+      "en": ["member balance sheet", "member's balance sheet", "member balances", "members balance sheet", "member sheet", "member sheet kholo", "member balance sheet kholo"],
+      "hi": ["सदस्य बैलेंस शीट", "सदस्य का हिसाब", "सदस्य शीट खोलो"],
+      "mr": ["सदस्य ताळेबंद", "सदस्याचा हिशोब", "सदस्य ताळेबंद उघडा", "सदस्य शीट उघडा"]
+    }
+  },
+  {
+    "intent": "OPEN_CALCULATION_REPORT",
+    "module": "calculationReport",
+    "examples": {
+      "en": ["calculation report", "open calculation report"],
+      "hi": ["गणना रिपोर्ट", "गणना रिपोर्ट खोलो", "हिसाब रिपोर्ट"],
+      "mr": ["गणना अहवाल", "गणना अहवाल उघडा", "हिशोब अहवाल"]
+    }
+  },
+  {
+    "intent": "OPEN_REMOVE_MEMBER",
+    "module": "removeMember",
+    "examples": {
+      "en": ["remove member page", "member removal", "remove member"],
+      "hi": ["सदस्य हटाने का पेज", "सदस्य हटाएं", "सदस्य हटाने का पेज खोलो"],
+      "mr": ["सदस्य काढण्याचे पान", "सदस्य काढा", "सदस्य काढण्याचे पान उघडा"]
+    }
+  },
+  {
+    "intent": "OPEN_RULES",
+    "module": "rulesNotice",
+    "examples": {
+      "en": ["rules and notices", "open group rules", "show group notices", "rules and notice", "rules notice"],
+      "hi": ["समूह के नियम", "नियम और सूचना", "नियम और सूचना खोलो"],
+      "mr": ["गटाचे नियम", "नियम व सूचना", "नियम आणि सूचना उघडा"]
+    }
+  },
+  {
+    "intent": "OPEN_SHARE",
+    "module": "shareApp",
+    "examples": {
+      "en": ["share app", "open share app", "share shg app", "open share shg app"],
+      "hi": ["ऐप साझा करो", "ऐप शेयर करो", "SHG ऐप शेयर करो"],
+      "mr": ["अॅप शेअर करा", "SHG अॅप शेअर करा", "अॅप सामायिक करा"]
+    }
+  },
+  {
+    "intent": "OPEN_PENALTY_SETTINGS",
+    "module": "penaltySettings",
+    "examples": {
+      "en": ["penalty settings", "open penalty settings"],
+      "hi": ["जुर्माना सेटिंग", "जुर्माना सेटिंग खोलो"],
+      "mr": ["दंड सेटिंग", "दंड सेटिंग उघडा"]
+    }
+  },
+  {
+    "intent": "OPEN_INTEREST_SETTINGS",
+    "module": "interestSettings",
+    "examples": {
+      "en": ["interest rate settings", "open interest settings", "interest rates", "interest settings"],
+      "hi": ["ब्याज दर सेटिंग", "ब्याज दरें खोलो"],
+      "mr": ["व्याज दर सेटिंग", "व्याज दर उघडा"]
+    }
+  }
+]

@@ -10,8 +10,9 @@ router.post('/register-president', requireFields(['shgName', 'name', 'email', 'p
 router.post('/register-member', requireFields(['name', 'phone', 'password']), controller.registerMember);
 router.post('/login', requireFields(['email', 'password']), controller.login);
 router.post('/login-shg', requireFields(['shgCode', 'role', 'name', 'password']), controller.loginWithShg);
+router.get('/shg/:code', controller.lookupShg);
 router.get('/me', protect, controller.me);
-router.post('/forgot-password', controller.forgotPassword);
-router.post('/reset-password', controller.resetPassword);
+router.post('/forgot-password', requireFields(['email']), controller.forgotPassword);
+router.post('/reset-password', requireFields(['token', 'password']), controller.resetPassword);
 
 module.exports = router;

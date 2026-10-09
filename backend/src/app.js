@@ -7,12 +7,17 @@ const shgRoutes = require('./routes/shgRoutes');
 const memberRoutes = require('./routes/memberRoutes');
 const savingsRoutes = require('./routes/savingsRoutes');
 const loanRoutes = require('./routes/loanRoutes');
+const loanApplicationRoutes = require('./routes/loanApplicationRoutes');
 const transactionRoutes = require('./routes/transactionRoutes');
+const paymentCollectionRoutes = require('./routes/paymentCollectionRoutes');
 const meetingRoutes = require('./routes/meetingRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
 const reportRoutes = require('./routes/reportRoutes');
 const resourceRoutes = require('./routes/resourceRoutes');
+const editRequestRoutes = require('./routes/editRequestRoutes');
+const speechRoutes = require('./routes/speechRoutes');
 const errorHandler = require('./middleware/errorHandler');
+const path = require('path');
 
 dotenv.config();
 
@@ -21,6 +26,7 @@ const app = express();
 app.use(cors({ origin: process.env.CLIENT_ORIGIN || true, credentials: true }));
 app.use(express.json({ limit: '2mb' }));
 app.use(express.urlencoded({ extended: true }));
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 app.get('/', (req, res) => {
   res.json({
@@ -32,7 +38,7 @@ app.get('/', (req, res) => {
 
 app.get('/api/health', (req, res) => {
   const databaseConnected = mongoose.connection.readyState === 1;
-  res.status(databaseConnected || !process.env.MONGODB_URI ? 200 : 503).json({
+  res.status(databaseConnected ? 200 : 503).json({
     status: databaseConnected ? 'ok' : 'database_unavailable',
     app: 'SHGMS',
     database: {
@@ -59,9 +65,13 @@ app.use('/api/shgs', shgRoutes);
 app.use('/api/members', memberRoutes);
 app.use('/api/savings', savingsRoutes);
 app.use('/api/loans', loanRoutes);
+app.use('/api/loan-applications', loanApplicationRoutes);
 app.use('/api/transactions', transactionRoutes);
+app.use('/api/payment-collections', paymentCollectionRoutes);
 app.use('/api/meetings', meetingRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use('/api/edit-requests', editRequestRoutes);
+app.use('/api/speech', speechRoutes);
 app.use('/api/reports', reportRoutes);
 app.use('/api', resourceRoutes);
 

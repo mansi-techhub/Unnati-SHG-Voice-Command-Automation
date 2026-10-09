@@ -7,6 +7,7 @@ const Savings = require('../src/models/Savings');
 const Loan = require('../src/models/Loan');
 const Transaction = require('../src/models/Transaction');
 const Meeting = require('../src/models/Meeting');
+const Attendance = require('../src/models/Attendance');
 const Notification = require('../src/models/Notification');
 const GovernmentScheme = require('../src/models/GovernmentScheme');
 const Goal = require('../src/models/Goal');
@@ -21,7 +22,7 @@ async function seed() {
   await mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/shgms');
   await Promise.all([
     User.deleteMany(), SHG.deleteMany(), Member.deleteMany(), Savings.deleteMany(), Loan.deleteMany(),
-    Transaction.deleteMany(), Meeting.deleteMany(), Notification.deleteMany(), GovernmentScheme.deleteMany(),
+    Transaction.deleteMany(), Meeting.deleteMany(), Attendance.deleteMany(), Notification.deleteMany(), GovernmentScheme.deleteMany(),
     Goal.deleteMany(), EmergencyFund.deleteMany(), Document.deleteMany(), AuditLog.deleteMany(),
   ]);
 
@@ -69,7 +70,8 @@ async function seed() {
     { loanId: 'LOAN003', shg: shg._id, member: members[8]._id, amount: 10000, purpose: 'Education fees', interestRate: 1.5, durationMonths: 8, status: 'completed', principalRepaid: 10000, interestPaid: 900, outstanding: 0, createdBy: admin._id },
   ]);
 
-  await Meeting.create({ shg: shg._id, title: 'Monthly savings and loan review', date: new Date('2026-09-02'), time: '10:30', location: 'Gram Panchayat Hall', agenda: 'Savings collection, overdue installment review, scheme awareness', status: 'scheduled', createdBy: admin._id });
+  const meeting = await Meeting.create({ shg: shg._id, title: 'Monthly savings and loan review', date: new Date('2026-09-02'), time: '10:30', location: 'Gram Panchayat Hall', agenda: 'Savings collection, overdue installment review, scheme awareness', status: 'scheduled', createdBy: admin._id });
+  await Attendance.create(members.map((member, index) => ({ shg: shg._id, meeting: meeting._id, member: member._id, present: index < 5, markedBy: admin._id })));
   await Notification.create({ shg: shg._id, title: 'Savings reminder', message: 'Monthly savings collection is scheduled for 5 September.', type: 'savings', createdBy: admin._id });
   await Goal.create({ shg: shg._id, title: 'Purchase Sewing Machines', targetAmount: 50000, savedAmount: 32500, dueDate: new Date('2026-12-31'), createdBy: admin._id });
   await EmergencyFund.create({ shg: shg._id, available: 18500, used: 4000, transactions: [{ type: 'contribution', amount: 22500, purpose: 'Monthly reserve', createdBy: admin._id }, { type: 'usage', amount: 4000, purpose: 'Medical emergency support', createdBy: admin._id }] });

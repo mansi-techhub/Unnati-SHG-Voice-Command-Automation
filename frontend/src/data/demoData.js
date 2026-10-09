@@ -1,13 +1,13 @@
 export const demoData = {
   shg: {
-    name: 'Sakhi Mahila Bachat Gat',
+    name: 'Your Self-Help Group',
     shgId: 'SHG-MH-2026-001',
     formationDate: '15 Jun 2021',
     village: 'Nandgaon',
     taluka: 'Shrigonda',
     district: 'Ahmednagar',
     state: 'Maharashtra',
-    president: 'Sunita Patil',
+    president: 'Group President',
     contact: '9876543210',
     monthlySavings: '₹500',
     interestRate: '2% monthly',

@@ -10,5 +10,6 @@ router.get('/', controller.list);
 router.post('/', authorize('admin'), requireFields(['shg', 'name']), controller.create);
 router.get('/:id', controller.get);
 router.patch('/:id', authorize('admin'), controller.update);
+router.delete('/:id', authorize('admin'), controller.remove);
 
 module.exports = router;
